@@ -11,12 +11,11 @@ create_table = """CREATE TABLE IF NOT EXISTS users (
 cur.execute(create_table)
 
 create_table = """CREATE TABLE IF NOT EXISTS items (
+	id INTEGER PRIMARY KEY,
 	name text,
 	price real
 );"""
 cur.execute(create_table)
-
-cur.execute("INSERT INTO items VALUES ('test', 10.99);")
 
 conn.commit()
 cur.close()
